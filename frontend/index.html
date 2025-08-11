@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <title>City counter</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      :root {
+        --bg: #fafafa;
+        --fg: #121212;
+        --muted: #6b7280;
+        --card: #ffffff;
+        --border: #e5e7eb;
+        --accent: #2563eb;
+        --radius: 14px;
+      }
+
+      body {
+        background:
+          radial-gradient(1200px 600px at 50% -10%, rgba(37, 99, 235, 0.06), transparent), var(--bg);
+        display: flex;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        margin: 0;
+      }
+
+      body,
+      #root {
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      input[type="text"],
+      input[type="search"] {
+        font-size: clamp(18px, 2.2vw, 28px);
+        padding: 10px 14px;
+        width: min(520px, 80vw);
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        outline: none;
+        transition:
+          border-color 0.15s ease,
+          box-shadow 0.15s ease,
+          transform 0.06s ease;
+      }
+
+      input[type="text"]:focus,
+      input[type="search"]:focus {
+        border-color: var(--accent);
+      }
+
+      .app {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        width: 100vw;
+      }
+
+      .desc {
+        color: var(--muted);
+        font-size: clamp(16px, 2.2vw, 24px);
+        margin: 0 auto 40px;
+      }
+
+      .label {
+        font-size: clamp(18px, 2.2vw, 28px);
+      }
+
+      .result {
+        min-height: 200px;
+        padding-top: 20px;
+      }
+
+      .card {
+        max-width: 900px;
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 22px 20px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+      }
+
+      .cities {
+        font-size: clamp(20px, 2.5vw, 28px);
+        margin-top: 12px;
+      }
+
+      .count {
+        font-size: clamp(22px, 3vw, 34px);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./src/index.tsx"></script>
+  </body>
+</html>

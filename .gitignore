@@ -1,0 +1,5 @@
+bin
+node_modules
+dist
+build
+.DS_Storegit remote add origin git@github.com:jakubbuskiewicz/task.git
